@@ -1,0 +1,139 @@
+[
+  {
+    "data": [
+      {
+        "name": "implementation",
+        "type": "felt"
+      }
+    ],
+    "keys": [],
+    "name": "Upgraded",
+    "type": "event"
+  },
+  {
+    "data": [
+      {
+        "name": "previousAdmin",
+        "type": "felt"
+      },
+      {
+        "name": "newAdmin",
+        "type": "felt"
+      }
+    ],
+    "keys": [],
+    "name": "AdminChanged",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "name": "implementation_hash",
+        "type": "felt"
+      },
+      {
+        "name": "proxy_admin",
+        "type": "felt"
+      }
+    ],
+    "name": "constructor",
+    "outputs": [],
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "getImplementationHash",
+    "outputs": [
+      {
+        "name": "address",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getAdmin",
+    "outputs": [
+      {
+        "name": "admin",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "selector",
+        "type": "felt"
+      },
+      {
+        "name": "calldata_size",
+        "type": "felt"
+      },
+      {
+        "name": "calldata",
+        "type": "felt*"
+      }
+    ],
+    "name": "__default__",
+    "outputs": [
+      {
+        "name": "retdata_size",
+        "type": "felt"
+      },
+      {
+        "name": "retdata",
+        "type": "felt*"
+      }
+    ],
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "selector",
+        "type": "felt"
+      },
+      {
+        "name": "calldata_size",
+        "type": "felt"
+      },
+      {
+        "name": "calldata",
+        "type": "felt*"
+      }
+    ],
+    "name": "__l1_default__",
+    "outputs": [],
+    "type": "l1_handler"
+  },
+  {
+    "type": "function",
+    "name": "getAmountOut",
+    "inputs": [
+      {
+        "name": "amountIn",
+        "type": "Uint256"
+      },
+      {
+        "name": "reserveIn",
+        "type": "felt"
+      },
+      {
+        "name": "reserveOut",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "amountOut",
+        "type": "Uint256"
+      }
+    ],
+    "stateMutability": "view"
+  }
+]

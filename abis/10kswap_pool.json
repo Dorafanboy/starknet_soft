@@ -1,0 +1,544 @@
+[
+  {
+    "type": "struct",
+    "name": "Uint256",
+    "size": 2,
+    "members": [
+      {
+        "name": "low",
+        "type": "felt",
+        "offset": 0
+      },
+      {
+        "name": "high",
+        "type": "felt",
+        "offset": 1
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "name": "Transfer",
+    "keys": [],
+    "data": [
+      {
+        "name": "from_",
+        "type": "felt"
+      },
+      {
+        "name": "to",
+        "type": "felt"
+      },
+      {
+        "name": "value",
+        "type": "Uint256"
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "name": "Approval",
+    "keys": [],
+    "data": [
+      {
+        "name": "owner",
+        "type": "felt"
+      },
+      {
+        "name": "spender",
+        "type": "felt"
+      },
+      {
+        "name": "value",
+        "type": "Uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "name",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "name",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "symbol",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "symbol",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "totalSupply",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "totalSupply",
+        "type": "Uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "decimals",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "decimals",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "balanceOf",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "balance",
+        "type": "Uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "allowance",
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "felt"
+      },
+      {
+        "name": "spender",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "remaining",
+        "type": "Uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "transfer",
+    "inputs": [
+      {
+        "name": "recipient",
+        "type": "felt"
+      },
+      {
+        "name": "amount",
+        "type": "Uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "success",
+        "type": "felt"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "transferFrom",
+    "inputs": [
+      {
+        "name": "sender",
+        "type": "felt"
+      },
+      {
+        "name": "recipient",
+        "type": "felt"
+      },
+      {
+        "name": "amount",
+        "type": "Uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "success",
+        "type": "felt"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "approve",
+    "inputs": [
+      {
+        "name": "spender",
+        "type": "felt"
+      },
+      {
+        "name": "amount",
+        "type": "Uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "success",
+        "type": "felt"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "increaseAllowance",
+    "inputs": [
+      {
+        "name": "spender",
+        "type": "felt"
+      },
+      {
+        "name": "added_value",
+        "type": "Uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "success",
+        "type": "felt"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "decreaseAllowance",
+    "inputs": [
+      {
+        "name": "spender",
+        "type": "felt"
+      },
+      {
+        "name": "subtracted_value",
+        "type": "Uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "success",
+        "type": "felt"
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "name": "Mint",
+    "keys": [],
+    "data": [
+      {
+        "name": "sender",
+        "type": "felt"
+      },
+      {
+        "name": "amount0",
+        "type": "Uint256"
+      },
+      {
+        "name": "amount1",
+        "type": "Uint256"
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "name": "Burn",
+    "keys": [],
+    "data": [
+      {
+        "name": "sender",
+        "type": "felt"
+      },
+      {
+        "name": "amount0",
+        "type": "Uint256"
+      },
+      {
+        "name": "amount1",
+        "type": "Uint256"
+      },
+      {
+        "name": "to",
+        "type": "felt"
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "name": "Swap",
+    "keys": [],
+    "data": [
+      {
+        "name": "sender",
+        "type": "felt"
+      },
+      {
+        "name": "amount0In",
+        "type": "Uint256"
+      },
+      {
+        "name": "amount1In",
+        "type": "Uint256"
+      },
+      {
+        "name": "amount0Out",
+        "type": "Uint256"
+      },
+      {
+        "name": "amount1Out",
+        "type": "Uint256"
+      },
+      {
+        "name": "to",
+        "type": "felt"
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "name": "Sync",
+    "keys": [],
+    "data": [
+      {
+        "name": "reserve0",
+        "type": "felt"
+      },
+      {
+        "name": "reserve1",
+        "type": "felt"
+      }
+    ]
+  },
+  {
+    "type": "constructor",
+    "name": "constructor",
+    "inputs": [],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "MINIMUM_LIQUIDITY",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "MINIMUM_LIQUIDITY",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "factory",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "factory",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "token0",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "token0",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "token1",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "token1",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "blockTimestampLast",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "blockTimestampLast",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "price0CumulativeLast",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "price0CumulativeLast",
+        "type": "Uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "price1CumulativeLast",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "price1CumulativeLast",
+        "type": "Uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "kLast",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "kLast",
+        "type": "Uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getReserves",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "reserve0",
+        "type": "felt"
+      },
+      {
+        "name": "reserve1",
+        "type": "felt"
+      },
+      {
+        "name": "blockTimestampLast",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "initialize",
+    "inputs": [
+      {
+        "name": "token0",
+        "type": "felt"
+      },
+      {
+        "name": "token1",
+        "type": "felt"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "mint",
+    "inputs": [
+      {
+        "name": "to",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "liquidity",
+        "type": "Uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "burn",
+    "inputs": [
+      {
+        "name": "to",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "amount0",
+        "type": "Uint256"
+      },
+      {
+        "name": "amount1",
+        "type": "Uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "swap",
+    "inputs": [
+      {
+        "name": "amount0Out",
+        "type": "Uint256"
+      },
+      {
+        "name": "amount1Out",
+        "type": "Uint256"
+      },
+      {
+        "name": "to",
+        "type": "felt"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "skim",
+    "inputs": [
+      {
+        "name": "to",
+        "type": "felt"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "sync",
+    "inputs": [],
+    "outputs": []
+  }
+]

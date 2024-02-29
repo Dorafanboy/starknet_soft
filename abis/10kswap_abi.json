@@ -1,0 +1,386 @@
+[
+  {
+    "type": "struct",
+    "name": "Uint256",
+    "size": 2,
+    "members": [
+      {
+        "name": "low",
+        "type": "felt",
+        "offset": 0
+      },
+      {
+        "name": "high",
+        "type": "felt",
+        "offset": 1
+      }
+    ]
+  },
+  {
+    "type": "constructor",
+    "name": "constructor",
+    "inputs": [
+      {
+        "name": "factory",
+        "type": "felt"
+      },
+      {
+        "name": "pairClass",
+        "type": "felt"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "factory",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "factory",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "quote",
+    "inputs": [
+      {
+        "name": "amountA",
+        "type": "Uint256"
+      },
+      {
+        "name": "reserveA",
+        "type": "felt"
+      },
+      {
+        "name": "reserveB",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "amountB",
+        "type": "Uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getAmountOut",
+    "inputs": [
+      {
+        "name": "amountIn",
+        "type": "Uint256"
+      },
+      {
+        "name": "reserveIn",
+        "type": "felt"
+      },
+      {
+        "name": "reserveOut",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "amountOut",
+        "type": "Uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getAmountIn",
+    "inputs": [
+      {
+        "name": "amountOut",
+        "type": "Uint256"
+      },
+      {
+        "name": "reserveIn",
+        "type": "felt"
+      },
+      {
+        "name": "reserveOut",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "amountIn",
+        "type": "Uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getAmountsOut",
+    "inputs": [
+      {
+        "name": "amountIn",
+        "type": "Uint256"
+      },
+      {
+        "name": "path_len",
+        "type": "felt"
+      },
+      {
+        "name": "path",
+        "type": "felt*"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "amounts_len",
+        "type": "felt"
+      },
+      {
+        "name": "amounts",
+        "type": "Uint256*"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getAmountsIn",
+    "inputs": [
+      {
+        "name": "amountOut",
+        "type": "Uint256"
+      },
+      {
+        "name": "path_len",
+        "type": "felt"
+      },
+      {
+        "name": "path",
+        "type": "felt*"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "amounts_len",
+        "type": "felt"
+      },
+      {
+        "name": "amounts",
+        "type": "Uint256*"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "addLiquidity",
+    "inputs": [
+      {
+        "name": "tokenA",
+        "type": "felt"
+      },
+      {
+        "name": "tokenB",
+        "type": "felt"
+      },
+      {
+        "name": "amountADesired",
+        "type": "Uint256"
+      },
+      {
+        "name": "amountBDesired",
+        "type": "Uint256"
+      },
+      {
+        "name": "amountAMin",
+        "type": "Uint256"
+      },
+      {
+        "name": "amountBMin",
+        "type": "Uint256"
+      },
+      {
+        "name": "to",
+        "type": "felt"
+      },
+      {
+        "name": "deadline",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "amountA",
+        "type": "Uint256"
+      },
+      {
+        "name": "amountB",
+        "type": "Uint256"
+      },
+      {
+        "name": "liquidity",
+        "type": "Uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "removeLiquidity",
+    "inputs": [
+      {
+        "name": "tokenA",
+        "type": "felt"
+      },
+      {
+        "name": "tokenB",
+        "type": "felt"
+      },
+      {
+        "name": "liquidity",
+        "type": "Uint256"
+      },
+      {
+        "name": "amountAMin",
+        "type": "Uint256"
+      },
+      {
+        "name": "amountBMin",
+        "type": "Uint256"
+      },
+      {
+        "name": "to",
+        "type": "felt"
+      },
+      {
+        "name": "deadline",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "amountA",
+        "type": "Uint256"
+      },
+      {
+        "name": "amountB",
+        "type": "Uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "swapExactTokensForTokens",
+    "inputs": [
+      {
+        "name": "amountIn",
+        "type": "Uint256"
+      },
+      {
+        "name": "amountOutMin",
+        "type": "Uint256"
+      },
+      {
+        "name": "path_len",
+        "type": "felt"
+      },
+      {
+        "name": "path",
+        "type": "felt*"
+      },
+      {
+        "name": "to",
+        "type": "felt"
+      },
+      {
+        "name": "deadline",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "amounts_len",
+        "type": "felt"
+      },
+      {
+        "name": "amounts",
+        "type": "Uint256*"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "swapTokensForExactTokens",
+    "inputs": [
+      {
+        "name": "amountOut",
+        "type": "Uint256"
+      },
+      {
+        "name": "amountInMax",
+        "type": "Uint256"
+      },
+      {
+        "name": "path_len",
+        "type": "felt"
+      },
+      {
+        "name": "path",
+        "type": "felt*"
+      },
+      {
+        "name": "to",
+        "type": "felt"
+      },
+      {
+        "name": "deadline",
+        "type": "felt"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "amounts_len",
+        "type": "felt"
+      },
+      {
+        "name": "amounts",
+        "type": "Uint256*"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "swapExactTokensForTokensSupportingFeeOnTransferTokens",
+    "inputs": [
+      {
+        "name": "amountIn",
+        "type": "Uint256"
+      },
+      {
+        "name": "amountOutMin",
+        "type": "Uint256"
+      },
+      {
+        "name": "path_len",
+        "type": "felt"
+      },
+      {
+        "name": "path",
+        "type": "felt*"
+      },
+      {
+        "name": "to",
+        "type": "felt"
+      },
+      {
+        "name": "deadline",
+        "type": "felt"
+      }
+    ],
+    "outputs": []
+  }
+]

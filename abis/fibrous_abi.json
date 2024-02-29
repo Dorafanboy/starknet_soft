@@ -1,0 +1,259 @@
+[
+  {
+    "members": [
+      {
+        "name": "token_in",
+        "offset": 0,
+        "type": "felt"
+      },
+      {
+        "name": "token_out",
+        "offset": 1,
+        "type": "felt"
+      },
+      {
+        "name": "rate",
+        "offset": 2,
+        "type": "felt"
+      },
+      {
+        "name": "protocol",
+        "offset": 3,
+        "type": "felt"
+      },
+      {
+        "name": "pool_address",
+        "offset": 4,
+        "type": "felt"
+      }
+    ],
+    "name": "Swap",
+    "size": 5,
+    "type": "struct"
+  },
+  {
+    "members": [
+      {
+        "name": "token_in",
+        "offset": 0,
+        "type": "felt"
+      },
+      {
+        "name": "token_out",
+        "offset": 1,
+        "type": "felt"
+      },
+      {
+        "name": "amount",
+        "offset": 2,
+        "type": "Uint256"
+      },
+      {
+        "name": "min_received",
+        "offset": 4,
+        "type": "Uint256"
+      },
+      {
+        "name": "destination",
+        "offset": 6,
+        "type": "felt"
+      }
+    ],
+    "name": "SwapParams",
+    "size": 7,
+    "type": "struct"
+  },
+  {
+    "members": [
+      {
+        "name": "low",
+        "offset": 0,
+        "type": "felt"
+      },
+      {
+        "name": "high",
+        "offset": 1,
+        "type": "felt"
+      }
+    ],
+    "name": "Uint256",
+    "size": 2,
+    "type": "struct"
+  },
+  {
+    "data": [
+      {
+        "name": "previousOwner",
+        "type": "felt"
+      },
+      {
+        "name": "newOwner",
+        "type": "felt"
+      }
+    ],
+    "keys": [],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "felt"
+      },
+      {
+        "name": "stark_rocks_address",
+        "type": "felt"
+      },
+      {
+        "name": "direct_swap_fee",
+        "type": "felt"
+      },
+      {
+        "name": "router_fee",
+        "type": "felt"
+      }
+    ],
+    "name": "constructor",
+    "outputs": [],
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "get_owner",
+    "outputs": [
+      {
+        "name": "owner",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "get_swap_handler",
+    "outputs": [
+      {
+        "name": "swap_handler",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "get_direct_swap_fee",
+    "outputs": [
+      {
+        "name": "direct_swap_fee",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "get_router_fee",
+    "outputs": [
+      {
+        "name": "router_fee",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "get_stark_rocks_address",
+    "outputs": [
+      {
+        "name": "stark_rocks_address",
+        "type": "felt"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "new_handler",
+        "type": "felt"
+      }
+    ],
+    "name": "set_swap_handler",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "new_direct_swap_fee",
+        "type": "felt"
+      }
+    ],
+    "name": "set_direct_swap_fee",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "new_router_fee",
+        "type": "felt"
+      }
+    ],
+    "name": "set_router_fee",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "new_address",
+        "type": "felt"
+      }
+    ],
+    "name": "set_stark_rocks_address",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "swaps_len",
+        "type": "felt"
+      },
+      {
+        "name": "swaps",
+        "type": "Swap*"
+      },
+      {
+        "name": "params",
+        "type": "SwapParams"
+      }
+    ],
+    "name": "swap",
+    "outputs": [],
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "token",
+        "type": "felt"
+      },
+      {
+        "name": "destination",
+        "type": "felt"
+      }
+    ],
+    "name": "claim",
+    "outputs": [],
+    "type": "function"
+  }
+]
